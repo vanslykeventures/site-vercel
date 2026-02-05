@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#0c1116] text-[#f6f1ea] relative overflow-hidden">
@@ -128,8 +130,15 @@ export default function Home() {
           </div>
         </section>
 
-        <footer className="mt-12 text-xs text-[#9c958a]">
-          © {new Date().getFullYear()} VanSlyke Ventures, LLC.
+        <footer className="mt-12 text-xs text-[#9c958a] flex flex-wrap items-center gap-3">
+          <span>© {new Date().getFullYear()} VanSlyke Ventures, LLC.</span>
+          <span className="text-white/20">|</span>
+          <Link
+            href="/privacy-policy"
+            className="text-[#f6f1ea] hover:text-[#f0c27b] transition-colors"
+          >
+            Privacy Policy
+          </Link>
         </footer>
       </div>
     </main>
